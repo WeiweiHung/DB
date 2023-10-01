@@ -10,19 +10,18 @@ const db = mysql.createPool({
   user: "root",
   host: "localhost",
   password: "Wei1040145",
-  database: "employeeSystem",
+  database: "portfolio",
 });
 
 app.post("/create", (req, res) => {
-  const name = req.body.name;
-  const age = req.body.age;
-  const country = req.body.country;
-  const position = req.body.position;
-  const wage = req.body.wage;
+  const workNAME = req.body.workNAME;
+  const workID = req.body.workID;
+  const workINTRO = req.body.workINTRO;
+  const workPATH = req.body.workPATH;
 
   db.query(
-    "INSERT INTO employees (name, age, country, position, wage) VALUES (?,?,?,?,?)",
-    [name, age, country, position, wage],
+    "INSERT INTO works(workID, workNAME, workINTRO, workPATH) VALUES (?,?,?,?)",
+    [workID, workNAME, workINTRO, workPATH],
     (err, result) => {
       if (err) {
         console.log(err);
@@ -33,8 +32,8 @@ app.post("/create", (req, res) => {
   );
 });
 
-app.get("/employees", (req, res) => {
-  db.query("SELECT * FROM employees", (err, result) => {
+app.get("/works", (req, res) => {
+  db.query("SELECT * FROM works", (err, result) => {
     if (err) {
       console.log(err);
     } else {

@@ -3,40 +3,37 @@ import { useState } from "react";
 import Axios from "axios";
 
 function App() {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState(0);
-  const [country, setCountry] = useState("");
-  const [position, setPosition] = useState("");
-  const [wage, setWage] = useState(0);
+  const [workNAME, setworkName] = useState("");
+  const [workID, setworkID ]= useState(0);
+  const [workINTRO, setworkINTRO] = useState("");
+  const [workPATH, setworkPATH] = useState("");
 
   const [newWage, setNewWage] = useState(0);
 
-  const [employeeList, setEmployeeList] = useState([]);
+  const [worklist, setworklist] = useState([]);
 
-  const addEmployee = () => {
+  const AddWork = () => {
     Axios.post("http://localhost:3001/create", {
-      name: name,
-      age: age,
-      country: country,
-      position: position,
-      wage: wage,
+      workNAME: workNAME,
+      workID: workID,
+      workINTRO: workINTRO,
+      workPATH: workPATH,
     }).then(() => {
-      setEmployeeList([
-        ...employeeList,
+      setworklist([
+        ...worklist,
         {
-          name: name,
-          age: age,
-          country: country,
-          position: position,
-          wage: wage,
+          workNAME: workNAME,
+          workID: workID,
+          workINTRO: workINTRO,
+          workPATH: workPATH,
         },
       ]);
     });
   };
 
-  const getEmployees = () => {
-    Axios.get("http://localhost:3001/employees").then((response) => {
-      setEmployeeList(response.data);
+  const ShowWork = () => {
+    Axios.get("http://localhost:3001/works").then((response) => {
+      setworklist(response.data);
     });
   };
 
@@ -74,55 +71,49 @@ function App() {
   return (
     <div className="App">
       <div className="information">
-        <label>Name:</label>
+        <label>Work's Name:</label>
         <input
           type="text"
           onChange={(event) => {
-            setName(event.target.value);
+            setworkName(event.target.value);
           }}
         />
-        <label>Age:</label>
+        <label>Work's ID</label>
         <input
           type="number"
           onChange={(event) => {
-            setAge(event.target.value);
+            setworkID(event.target.value);
           }}
         />
-        <label>Country:</label>
+        <label>Work's INTRO</label>
         <input
           type="text"
           onChange={(event) => {
-            setCountry(event.target.value);
+            setworkINTRO(event.target.value);
           }}
         />
-        <label>Position:</label>
+        <label>Work's PATH</label>
         <input
           type="text"
           onChange={(event) => {
-            setPosition(event.target.value);
+            setworkPATH(event.target.value);
           }}
         />
-        <label>Wage (year):</label>
-        <input
-          type="number"
-          onChange={(event) => {
-            setWage(event.target.value);
-          }}
-        />
-        <button onClick={addEmployee}>Add Employee</button>
+        {/* 設好input */}
+        <button onClick={AddWork}>Add Work</button>
       </div>
-      <div className="employees">
-        <button onClick={getEmployees}>Show Employees</button>
+      <div className="works">
+        <button onClick={ShowWork}>Show Work</button>
 
-        {employeeList.map((val, key) => {
+        {worklist.map((val, key) => {
           return (
-            <div className="employee">
+            <div className="works">
               <div>
-                <h3>Name: {val.name}</h3>
-                <h3>Age: {val.age}</h3>
-                <h3>Country: {val.country}</h3>
-                <h3>Position: {val.position}</h3>
-                <h3>Wage: {val.wage}</h3>
+                <h3>Work's Name: {val.workNAME}</h3>
+                <h3>Work's ID {val.workID}</h3>
+                <h3>Work's INTRO {val.workINTRO}</h3>
+                <h3>Work's PATH {val.workPATH}</h3>
+                
               </div>
               <div>
                 <input
