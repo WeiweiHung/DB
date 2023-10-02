@@ -37,16 +37,15 @@ function App() {
     });
   };
 
-  const updateWorkINTRO = (id) => {
-    Axios.put("http://localhost:3001/update", {workINTRO: newworkINTRO, id: id }).then(
+  const updateWorkINTRO = (workID) => {
+    Axios.put("http://localhost:3001/update", {workINTRO: newworkINTRO, workID: workID }).then(
       (response) => {
         setworklist(
           worklist.map((val) => {
-            return val.id == id
+            return val.workID == workID
               ? {
-                  id: val.id,
+                  workID: val.workID,
                   workNAME: workNAME,
-                  workID: workID,
                   workINTRO: newworkINTRO,
                   workPATH: workPATH,
                 }
@@ -61,7 +60,7 @@ function App() {
     Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
       setworklist(
         worklist.filter((val) => {
-          return val.id != id;
+          return val.workID != id;
         })
       );
     });
@@ -120,11 +119,12 @@ function App() {
                   placeholder="2000..."
                   onChange={(event) => {
                     setnewworkINTRO(event.target.value);
+                    console.log(event.target.value);
                   }}
                 />
                 <button
                   onClick={() => {
-                    updateWorkINTRO(val.id);
+                    updateWorkINTRO(val.workID);
                   }}
                 >
                   {" "}
@@ -133,7 +133,7 @@ function App() {
 
                 <button
                   onClick={() => {
-                    deletework(val.id);
+                    deletework(val.workID);
                   }}
                 >
                   Delete
