@@ -8,7 +8,7 @@ function App() {
   const [workINTRO, setworkINTRO] = useState("");
   const [workPATH, setworkPATH] = useState("");
 
-  const [newWage, setNewWage] = useState(0);
+  const [newworkINTRO, setnewworkINTRO] = useState(0);
 
   const [worklist, setworklist] = useState([]);
 
@@ -37,19 +37,18 @@ function App() {
     });
   };
 
-  const updateEmployeeWage = (id) => {
-    Axios.put("http://localhost:3001/update", { wage: newWage, id: id }).then(
+  const updateWorkINTRO = (id) => {
+    Axios.put("http://localhost:3001/update", {workINTRO: newworkINTRO, id: id }).then(
       (response) => {
-        setEmployeeList(
-          employeeList.map((val) => {
+        setworklist(
+          worklist.map((val) => {
             return val.id == id
               ? {
                   id: val.id,
-                  name: val.name,
-                  country: val.country,
-                  age: val.age,
-                  position: val.position,
-                  wage: newWage,
+                  workNAME: workNAME,
+                  workID: workID,
+                  workINTRO: newworkINTRO,
+                  workPATH: workPATH,
                 }
               : val;
           })
@@ -58,10 +57,10 @@ function App() {
     );
   };
 
-  const deleteEmployee = (id) => {
+  const deletework = (id) => {
     Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
-      setEmployeeList(
-        employeeList.filter((val) => {
+      setworklist(
+        worklist.filter((val) => {
           return val.id != id;
         })
       );
@@ -120,12 +119,12 @@ function App() {
                   type="text"
                   placeholder="2000..."
                   onChange={(event) => {
-                    setNewWage(event.target.value);
+                    setnewworkINTRO(event.target.value);
                   }}
                 />
                 <button
                   onClick={() => {
-                    updateEmployeeWage(val.id);
+                    updateWorkINTRO(val.id);
                   }}
                 >
                   {" "}
@@ -134,7 +133,7 @@ function App() {
 
                 <button
                   onClick={() => {
-                    deleteEmployee(val.id);
+                    deletework(val.id);
                   }}
                 >
                   Delete

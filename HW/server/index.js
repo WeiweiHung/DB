@@ -43,11 +43,11 @@ app.get("/works", (req, res) => {
 });
 
 app.put("/update", (req, res) => {
-  const id = req.body.id;
-  const wage = req.body.wage;
+  const workID = req.params.id;
+  const workINTRO = req.body.workINTRO;
   db.query(
-    "UPDATE employees SET wage = ? WHERE id = ?",
-    [wage, id],
+    "UPDATE works SET workINTRO = ? WHERE workID = ?",
+    [workINTRO, workID],
     (err, result) => {
       if (err) {
         console.log(err);
