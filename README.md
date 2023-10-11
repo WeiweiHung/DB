@@ -6,7 +6,7 @@
 + [HW1_ERD & CRUD with My Tables](https://youtu.be/5YOuC4qYoBc)
     + [ERD](https://app.diagrams.net/#HWeiweiHung%2FDB%2Fmain%2FHW1.drawio)
     + [ERD-1](https://app.diagrams.net/#HWeiweiHung%2FDB%2Fmain%2FHW1-1.drawio)
-+ [HW2_CRUD in Web APP with My Table](https://youtu.be/5e_IQYeUPDY)
++ [HW2_CRUD in Web APP with My Table](https://youtu.be/5e_IQYeUPDY)[_part2](https://youtu.be/5hHBor0JQwY)
 # :clapper: Final project
 # :bookmark_tabs:Course
 + ppt
