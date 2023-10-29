@@ -7,6 +7,7 @@
     + [ERD](https://app.diagrams.net/#HWeiweiHung%2FDB%2Fmain%2FHW1.drawio)
     + [ERD-1](https://app.diagrams.net/#HWeiweiHung%2FDB%2Fmain%2FHW1-1.drawio)
 + [HW2_CRUD in Web APP with My Table](https://youtu.be/5e_IQYeUPDY)[_part2](https://youtu.be/5hHBor0JQwY)
++ [HW3_CRUD in NoSQL from My SQL Table](https://youtu.be/bnK6SATmI9A)
 # :clapper: Final project
 # :bookmark_tabs:Course
 + ppt
