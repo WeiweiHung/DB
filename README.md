@@ -6,7 +6,8 @@
 + [HW1_ERD & CRUD with My Tables](https://youtu.be/5YOuC4qYoBc)
     + [ERD](https://app.diagrams.net/#HWeiweiHung%2FDB%2Fmain%2FHW1.drawio)
     + [ERD-1](https://app.diagrams.net/#HWeiweiHung%2FDB%2Fmain%2FHW1-1.drawio)
-+ [HW2_CRUD in Web APP with My Table](https://youtu.be/5e_IQYeUPDY)
++ [HW2_CRUD in Web APP with My Table](https://youtu.be/5e_IQYeUPDY)[_part2](https://youtu.be/5hHBor0JQwY)
++ [HW3_CRUD in NoSQL from My SQL Table](https://youtu.be/bnK6SATmI9A)
 # :clapper: Final project
 # :bookmark_tabs:Course
 + ppt
@@ -15,6 +16,9 @@
     + week3_field_trip
     + [week4](https://docs.google.com/presentation/d/1053jwkOvLAdeQCDUJKq-c0NwxB3jOqlkiL244y0DPro/edit#slide=id.g23dd2219a46_0_124)
     + [week5](https://docs.google.com/presentation/d/1J0ASP97LgjTQeKqTdm1vRhxh6MGya-C1D-8w7ykUPqE/edit#slide=id.g23dd2219a46_0_124)
+    + [week7](https://docs.google.com/presentation/d/1VGS4z-40x0ZS8baC3PHP4TBLZn3S3YEe9owg4_vIZWc/edit#slide=id.g23dd2219a46_0_124)
+    + [week8](https://docs.google.com/presentation/d/1semHnB07DAbbwkl-4-LmuZL8DQDZ5t6zAA1Jbft-uuQ/edit#slide=id.g2410febba22_0_5)
+    + [week9](https://docs.google.com/presentation/d/1g1mkza7Uufm9A4fwRI_fJRAcWf-QTFf9Jn00I8iiLM0/edit#slide=id.g2410febba22_0_5)
 
 + Self-study
     + [w3schools](https://www.w3schools.com/)
