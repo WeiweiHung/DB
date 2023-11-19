@@ -8,6 +8,7 @@
     + [ERD-1](https://app.diagrams.net/#HWeiweiHung%2FDB%2Fmain%2FHW1-1.drawio)
 + [HW2_CRUD in Web APP with My Table](https://youtu.be/5e_IQYeUPDY)[_part2](https://youtu.be/5hHBor0JQwY)
 + [HW3_CRUD in NoSQL from My SQL Table](https://youtu.be/bnK6SATmI9A)
++ [HW4_Import data into MySQL](https://youtu.be/RvZg3idezwE)
 + [HW5_Deploy jobs one to four as a whole to the cloud servi音檔全毀版，哪天有空再重錄｡ﾟヽ(ﾟ´Д`)ﾉﾟ｡)](https://youtu.be/tPKcgzVK0aM)
 # :clapper: Final project
 # :bookmark_tabs:Course
